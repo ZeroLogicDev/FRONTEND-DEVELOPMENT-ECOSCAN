@@ -18,13 +18,13 @@ export function AuthProvider({ children }) {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Fetch profile from Supabase profiles table
+  // Fetch profile from Supabase profiles table (non-blocking)
   async function fetchProfile(userId) {
     try {
       const profileData = await profileService.getProfile(userId);
       setProfile(profileData);
     } catch (err) {
-      console.error('Failed to fetch profile:', err);
+      console.warn('[AuthContext] Profile fetch failed (non-fatal):', err.message);
       setProfile(null);
     }
   }
@@ -37,20 +37,39 @@ export function AuthProvider({ children }) {
   }
 
   useEffect(() => {
+    let isMounted = true;
+
+    // Safety timeout — never stay loading for more than 8 seconds
+    const timeout = setTimeout(() => {
+      if (isMounted && loading) {
+        console.warn('[AuthContext] Auth init timed out — forcing loading=false');
+        setLoading(false);
+      }
+    }, 8000);
+
     // Get initial session
     async function initAuth() {
       try {
+        console.log('[AuthContext] Initializing auth...');
         const session = await authService.getSession();
         const currentUser = session?.user ?? null;
-        setUser(currentUser);
 
-        if (currentUser) {
-          await fetchProfile(currentUser.id);
+        console.log('[AuthContext] Session:', currentUser ? `User: ${currentUser.email}` : 'No session');
+
+        if (isMounted) {
+          setUser(currentUser);
+
+          if (currentUser) {
+            // Fetch profile in background — don't block loading
+            fetchProfile(currentUser.id);
+          }
         }
       } catch (err) {
-        console.error('Auth initialization failed:', err);
+        console.error('[AuthContext] Auth init failed:', err);
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     }
 
@@ -59,20 +78,29 @@ export function AuthProvider({ children }) {
     // Listen for auth state changes (login, logout, token refresh)
     const { data: { subscription } } = authService.onAuthStateChange(
       async (event, session) => {
+        console.log('[AuthContext] Auth event:', event);
         const currentUser = session?.user ?? null;
-        setUser(currentUser);
 
-        if (currentUser) {
-          await fetchProfile(currentUser.id);
-        } else {
-          setProfile(null);
+        if (isMounted) {
+          setUser(currentUser);
+
+          if (currentUser) {
+            // Fetch profile in background — don't block
+            fetchProfile(currentUser.id);
+          } else {
+            setProfile(null);
+          }
+
+          setLoading(false);
         }
-
-        setLoading(false);
       }
     );
 
-    return () => subscription.unsubscribe();
+    return () => {
+      isMounted = false;
+      clearTimeout(timeout);
+      subscription.unsubscribe();
+    };
   }, []);
 
   const value = {
