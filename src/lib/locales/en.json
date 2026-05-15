@@ -1,0 +1,117 @@
+{
+  "app": {
+    "name": "EcoScan V2",
+    "tagline": "AI-Powered Waste Classification"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "scan": "Scan",
+    "history": "History",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Log Out"
+  },
+  "landing": {
+    "hero_title": "Scan Waste with AI,\nSave the Planet",
+    "hero_subtitle": "EcoScan uses advanced AI to classify waste instantly. Track your eco-impact and earn EcoCoins for every scan.",
+    "cta_primary": "Get Started — It's Free",
+    "cta_secondary": "Learn More",
+    "feature_1_title": "AI Classification",
+    "feature_1_desc": "Powered by ResNet50, classify 13 types of waste in seconds.",
+    "feature_2_title": "Track Your Impact",
+    "feature_2_desc": "Monitor your scanning history and see your contribution to a cleaner Earth.",
+    "feature_3_title": "Earn EcoCoins",
+    "feature_3_desc": "Get rewarded for every scan. Climb the leaderboard and unlock achievements."
+  },
+  "auth": {
+    "welcome_back": "Welcome Back",
+    "sign_in_desc": "Sign in to continue your eco-journey",
+    "sign_in_google": "Continue with Google",
+    "signing_in": "Signing in...",
+    "no_account": "Don't have an account? Sign up with Google to get started.",
+    "auth_error": "Authentication failed. Please try again.",
+    "logging_out": "Logging out..."
+  },
+  "dashboard": {
+    "welcome": "Welcome back,",
+    "total_scans": "Total Scans",
+    "organic_count": "Organic",
+    "inorganic_count": "Inorganic",
+    "eco_coins": "EcoCoins",
+    "recent_scans": "Recent Scans",
+    "quick_actions": "Quick Actions",
+    "scan_now": "Scan Now",
+    "view_history": "View History",
+    "no_scans_yet": "No scans yet",
+    "start_scanning": "Start scanning to see your impact here!"
+  },
+  "scan": {
+    "title": "Scan Waste",
+    "subtitle": "Point your camera at waste to classify it",
+    "take_photo": "Take Photo",
+    "upload_image": "Upload Image",
+    "retake": "Retake",
+    "analyzing": "Analyzing...",
+    "ai_thinking": "AI is classifying your waste...",
+    "result_title": "Scan Result",
+    "class": "Type",
+    "category": "Category",
+    "confidence": "Confidence",
+    "save_result": "Save Result",
+    "scan_again": "Scan Again",
+    "saved_success": "Scan saved successfully!",
+    "camera_error": "Could not access camera. Please grant permission.",
+    "organic": "Organic",
+    "inorganic": "Inorganic"
+  },
+  "history": {
+    "title": "Scan History",
+    "subtitle": "All your past scans in one place",
+    "filter_all": "All",
+    "filter_organic": "Organic",
+    "filter_inorganic": "Inorganic",
+    "search_placeholder": "Search by waste type...",
+    "no_history": "No scan history found",
+    "start_first": "Start your first scan to build your history!",
+    "date": "Date",
+    "type": "Type",
+    "category": "Category",
+    "confidence": "Confidence"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit_profile": "Edit Profile",
+    "save_changes": "Save Changes",
+    "cancel": "Cancel",
+    "full_name": "Full Name",
+    "email": "Email",
+    "member_since": "Member since",
+    "total_points": "Total Points",
+    "update_success": "Profile updated successfully!",
+    "update_error": "Failed to update profile. Please try again."
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "dark_mode": "Dark Mode",
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Bahasa Indonesia"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "close": "Close",
+    "empty_state": "No data to display",
+    "offline": "You are currently offline",
+    "page_not_found": "Page Not Found",
+    "not_found_desc": "The page you're looking for doesn't exist or has been moved.",
+    "go_home": "Go to Dashboard"
+  }
+}

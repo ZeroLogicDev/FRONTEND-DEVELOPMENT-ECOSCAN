@@ -1,0 +1,117 @@
+{
+  "app": {
+    "name": "EcoScan V2",
+    "tagline": "Klasifikasi Sampah Berbasis AI"
+  },
+  "nav": {
+    "dashboard": "Beranda",
+    "scan": "Pindai",
+    "history": "Riwayat",
+    "profile": "Profil",
+    "settings": "Pengaturan",
+    "logout": "Keluar"
+  },
+  "landing": {
+    "hero_title": "Pindai Sampah dengan AI,\nSelamatkan Bumi",
+    "hero_subtitle": "EcoScan menggunakan AI canggih untuk mengklasifikasikan sampah secara instan. Pantau dampak ekologismu dan dapatkan EcoCoins untuk setiap pemindaian.",
+    "cta_primary": "Mulai Sekarang — Gratis",
+    "cta_secondary": "Pelajari Lebih Lanjut",
+    "feature_1_title": "Klasifikasi AI",
+    "feature_1_desc": "Didukung oleh ResNet50, klasifikasikan 13 jenis sampah dalam hitungan detik.",
+    "feature_2_title": "Pantau Dampakmu",
+    "feature_2_desc": "Monitor riwayat pemindaianmu dan lihat kontribusimu untuk Bumi yang lebih bersih.",
+    "feature_3_title": "Dapatkan EcoCoins",
+    "feature_3_desc": "Dapatkan hadiah untuk setiap pemindaian. Naiki papan peringkat dan buka pencapaian."
+  },
+  "auth": {
+    "welcome_back": "Selamat Datang Kembali",
+    "sign_in_desc": "Masuk untuk melanjutkan perjalanan ekologismu",
+    "sign_in_google": "Lanjutkan dengan Google",
+    "signing_in": "Sedang masuk...",
+    "no_account": "Belum punya akun? Daftar dengan Google untuk memulai.",
+    "auth_error": "Autentikasi gagal. Silakan coba lagi.",
+    "logging_out": "Sedang keluar..."
+  },
+  "dashboard": {
+    "welcome": "Selamat datang,",
+    "total_scans": "Total Pemindaian",
+    "organic_count": "Organik",
+    "inorganic_count": "Anorganik",
+    "eco_coins": "EcoCoins",
+    "recent_scans": "Pemindaian Terbaru",
+    "quick_actions": "Aksi Cepat",
+    "scan_now": "Pindai Sekarang",
+    "view_history": "Lihat Riwayat",
+    "no_scans_yet": "Belum ada pemindaian",
+    "start_scanning": "Mulai memindai untuk melihat dampakmu di sini!"
+  },
+  "scan": {
+    "title": "Pindai Sampah",
+    "subtitle": "Arahkan kamera ke sampah untuk mengklasifikasinya",
+    "take_photo": "Ambil Foto",
+    "upload_image": "Unggah Gambar",
+    "retake": "Ambil Ulang",
+    "analyzing": "Menganalisis...",
+    "ai_thinking": "AI sedang mengklasifikasikan sampahmu...",
+    "result_title": "Hasil Pemindaian",
+    "class": "Jenis",
+    "category": "Kategori",
+    "confidence": "Kepercayaan",
+    "save_result": "Simpan Hasil",
+    "scan_again": "Pindai Lagi",
+    "saved_success": "Pemindaian berhasil disimpan!",
+    "camera_error": "Tidak bisa mengakses kamera. Silakan berikan izin.",
+    "organic": "Organik",
+    "inorganic": "Anorganik"
+  },
+  "history": {
+    "title": "Riwayat Pemindaian",
+    "subtitle": "Semua pemindaian sebelumnya dalam satu tempat",
+    "filter_all": "Semua",
+    "filter_organic": "Organik",
+    "filter_inorganic": "Anorganik",
+    "search_placeholder": "Cari berdasarkan jenis sampah...",
+    "no_history": "Riwayat pemindaian tidak ditemukan",
+    "start_first": "Mulai pemindaian pertamamu untuk membangun riwayat!",
+    "date": "Tanggal",
+    "type": "Jenis",
+    "category": "Kategori",
+    "confidence": "Kepercayaan"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit_profile": "Ubah Profil",
+    "save_changes": "Simpan Perubahan",
+    "cancel": "Batal",
+    "full_name": "Nama Lengkap",
+    "email": "Email",
+    "member_since": "Bergabung sejak",
+    "total_points": "Total Poin",
+    "update_success": "Profil berhasil diperbarui!",
+    "update_error": "Gagal memperbarui profil. Silakan coba lagi."
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "appearance": "Tampilan",
+    "dark_mode": "Mode Gelap",
+    "language": "Bahasa",
+    "english": "English",
+    "indonesian": "Bahasa Indonesia"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba Lagi",
+    "back": "Kembali",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "confirm": "Konfirmasi",
+    "close": "Tutup",
+    "empty_state": "Tidak ada data untuk ditampilkan",
+    "offline": "Anda sedang tidak terhubung ke internet",
+    "page_not_found": "Halaman Tidak Ditemukan",
+    "not_found_desc": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "go_home": "Kembali ke Beranda"
+  }
+}
